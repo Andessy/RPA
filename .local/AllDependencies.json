@@ -2604,9 +2604,9 @@
     "restore": {
       "projectUniqueName": "PrimaveraProcess",
       "projectName": "PrimaveraProcess",
-      "projectPath": "C:\\Users\\LuisaFernandaAceroMa\\Downloads\\RPA-main\\RPA-main\\.local",
+      "projectPath": "C:\\Users\\LuisaFernandaAceroMa\\Documents\\RPA Github\\RPA\\.local",
       "packagesPath": "C:\\Users\\LuisaFernandaAceroMa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LuisaFernandaAceroMa\\Downloads\\RPA-main\\RPA-main\\.local"
+      "outputPath": "C:\\Users\\LuisaFernandaAceroMa\\Documents\\RPA Github\\RPA\\.local"
     },
     "frameworks": {
       "net461": {
