@@ -3,11 +3,12 @@
     <x:Property Name="Email" Type="InArgument(x:String)" />
     <x:Property Name="dataTablePrimavera" Type="InArgument(sd:DataTable)" />
     <x:Property Name="dataTableUserActivities" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="EmailSend" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1342,3710</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1342,3719</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LoadActivity_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -74,9 +75,11 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="LoadActivity" sap:VirtualizedContainerService.HintSize="1352,3505" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="LoadActivity" sap:VirtualizedContainerService.HintSize="1352,3514" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dataTableActivities" />
       <Variable x:TypeArguments="x:Boolean" Default="False" Name="buttonAdd" />
@@ -138,7 +141,7 @@
         </ui:Target>
       </ui:ClickImage.Target>
     </ui:ClickImage>
-    <If Condition="[dataTableActivities.rows.count = 0]" sap:VirtualizedContainerService.HintSize="1310,2964" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[dataTableActivities.rows.count = 0]" sap:VirtualizedContainerService.HintSize="1310,2973" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <Sequence sap:VirtualizedContainerService.HintSize="376,325" sap2010:WorkflowViewState.IdRef="Sequence_9">
           <sap:WorkflowViewStateService.ViewState>
@@ -172,19 +175,19 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="889,2806" sap2010:WorkflowViewState.IdRef="Sequence_10">
+        <Sequence sap:VirtualizedContainerService.HintSize="889,2813" sap2010:WorkflowViewState.IdRef="Sequence_10">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dataTableActivities]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="847,1472" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+          <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dataTableActivities]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="847,1476" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="797,1324" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="797,1327" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -215,7 +218,7 @@
                       </ui:Target>
                     </ui:ClickImage.Target>
                   </ui:ClickImage>
-                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="755,116" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="tab" KeyModifiers="None" SpecialKey="True">
+                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="755,117" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="tab" KeyModifiers="None" SpecialKey="True">
                     <ui:SendHotkey.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="1b664a5f-ab44-4cd2-b88a-10f7e1072262">
                         <ui:Target.TimeoutMS>
@@ -276,7 +279,7 @@
                       </ui:Target>
                     </ui:ImageFound.Target>
                   </ui:ImageFound>
-                  <If Condition="[searchActivity]" sap:VirtualizedContainerService.HintSize="755,502" sap2010:WorkflowViewState.IdRef="If_3">
+                  <If Condition="[searchActivity]" sap:VirtualizedContainerService.HintSize="755,504" sap2010:WorkflowViewState.IdRef="If_3">
                     <If.Then>
                       <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_11" KeyModifiers="None" MouseButton="BTN_LEFT">
                         <ui:ClickImage.CursorPosition>
@@ -406,7 +409,7 @@
               </ui:Target>
             </ui:ImageFound.Target>
           </ui:ImageFound>
-          <If Condition="[buttonAdd]" sap:VirtualizedContainerService.HintSize="847,283" sap2010:WorkflowViewState.IdRef="If_2">
+          <If Condition="[buttonAdd]" sap:VirtualizedContainerService.HintSize="847,286" sap2010:WorkflowViewState.IdRef="If_2">
             <If.Then>
               <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_15" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:ClickImage.CursorPosition>
@@ -502,7 +505,12 @@
           </ui:ClickImage>
           <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke LoadTimes workflow" sap:VirtualizedContainerService.HintSize="847,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="LoadTimes.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="sd:DataTable" x:Key="DataTableActivities">[dataTableUserActivities]</InArgument>
+              <InArgument x:TypeArguments="sd:DataTable" x:Key="DataTableActivities">
+                <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dataTableUserActivities" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="EmailSend">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="EmailSend" />
+              </InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </Sequence>
