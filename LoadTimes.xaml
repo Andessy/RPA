@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="LoadTimes" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="LoadTimes" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="DataTableActivities" Type="InArgument(sd:DataTable)" />
     <x:Property Name="EmailSend" Type="InArgument(x:String)" />
@@ -6,10 +6,10 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>4951,4052</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>5052,4510</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LoadTimes_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <sco:Collection x:TypeArguments="x:String">
+    <scg:List x:TypeArguments="x:String" Capacity="43">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -53,10 +53,10 @@
       <x:String>UiPath.Mail</x:String>
       <x:String>UiPath.Mail.SMTP.Activities</x:String>
       <x:String>UiPath.Excel</x:String>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <sco:Collection x:TypeArguments="AssemblyReference">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -89,15 +89,14 @@
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
-    </sco:Collection>
+    </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
     <scg:Dictionary x:TypeArguments="x:String, x:Object">
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="LoadTimes" sap:VirtualizedContainerService.HintSize="4961,3887" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="LoadTimes" sap:VirtualizedContainerService.HintSize="5062,4345" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dataTablePrimavera" />
       <Variable x:TypeArguments="x:Boolean" Default="False" Name="searchSave" />
@@ -110,11 +109,7 @@
       <Variable x:TypeArguments="x:String" Name="nameIT" />
       <Variable x:TypeArguments="x:String" Name="emailreal" />
       <Variable x:TypeArguments="sd:DataTable" Name="DataTableEmailIT" />
-      <Variable x:TypeArguments="x:Int32" Name="UpdateDateButtonOffset">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="UpdateDateButtonOffset" />
       <Variable x:TypeArguments="x:Boolean" Name="UpdateDateButton" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -123,7 +118,7 @@
         <x:Boolean x:Key="IsPinned">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ImageFound DisplayName="Image Exists 'wfica32.exe Primavera'" Found="[UpdateDateButton]" sap:VirtualizedContainerService.HintSize="4919,106" sap2010:WorkflowViewState.IdRef="ImageFound_3">
+    <ui:ImageFound DisplayName="Image Exists 'wfica32.exe Primavera'" Found="[UpdateDateButton]" sap:VirtualizedContainerService.HintSize="5020,106" sap2010:WorkflowViewState.IdRef="ImageFound_3">
       <ui:ImageFound.Image>
         <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAAgCAYAAADpNa1pAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJySURBVGhD7ZqxbvIwEMf7esx9BHZGJF4iYuA1EBJv0AVBmVqpCwIxVKrUmaHt5PrOd8nZsZNUQLDKWfpJiWOf7/7/M/2G78HoyGKoEZkMNSKToUZkMkojnl935mn7pvSIHGjE5mVn3j8+zel0UnoC9N7Y5ueBRoA7scXKdZG3Qo24IWpEJqgRmaBGZIIakQnnGXFcmNHjxMyP/vx6NjSj5d6ba2U7NYPHqVnHvgkOy4kZzFbRb0kwz6GN7xPmnaKI1Hhp7siIIE88r5vA/8CIvZmPh6ZYuo5EpEHUqUAx841Awe28170oHs2xGXJuvKhiSxrylKZCrmEsOcf7cR/NyXrk/F+bpRcjSoGD9YUoxBVB68TtQIRg3o3w4tFZMQESeeI5VvCDfZZnAJBbsYXnlXcj8Hza4+LSOhELmI8j5zXQixFh1+A77hU/ReG7QIpfexbFsxhyL9LBCG/eAnnXjajq4TPLegIjwnht9GKEKyj4Bok3GIHdzdccSBkh1xAYT5LIUxrp1vhxUkbINUgkH1d/dVYb5xlhiRXIXRO7EeV7gxFhp9fEjzw30tAwbn88z5QRsrFSdF3HnG0EHOiJgQIHHcQ/F54gfvF4UyJGOCGCruPzAoFR2HKfIGZEJM/SCPwWN4Jz4zj8dy5sCojnndfC2UYAKDZdSaBKgDoI/0XkvnldggKBAVAMPPMNIfGJNQjDApNIZdH8zms5toSMkOuAujH0zcaufl5XVF9guFjLMaQO8nZ14SJGpOl+le8dNSITrmyE0hU1IhPUiExQIzJBjcgENSITakbAgP/bBB+U/vj6/iH1hRE6bjvUiCyGMb/SRHToVhLqEAAAAABJRU5ErkJggg==" />
       </ui:ImageFound.Image>
@@ -140,13 +135,30 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ImageFound>
-    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DataTableActivities]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="4919,3320" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <If Condition="[UpdateDateButton = True]" sap:VirtualizedContainerService.HintSize="5020,237" sap2010:WorkflowViewState.IdRef="If_26">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Then>
+        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:Int32">[UpdateDateButtonOffset]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:Int32">15</InArgument>
+          </Assign.Value>
+        </Assign>
+      </If.Then>
+    </If>
+    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[DataTableActivities]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="5020,3501" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="4869,3172" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="4970,3353" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="TextOcr" />
               <Variable x:TypeArguments="x:String" Name="text" />
@@ -158,7 +170,7 @@
                 <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="4827,51" sap2010:WorkflowViewState.IdRef="ClickImage_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="4928,51" sap2010:WorkflowViewState.IdRef="ClickImage_3" KeyModifiers="None" MouseButton="BTN_LEFT">
               <ui:ClickImage.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -183,7 +195,7 @@
                 </ui:Target>
               </ui:ClickImage.Target>
             </ui:ClickImage>
-            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into" sap:VirtualizedContainerService.HintSize="4827,51" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[row(6).ToString]">
+            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into" sap:VirtualizedContainerService.HintSize="4928,51" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[row(6).ToString]">
               <ui:TypeInto.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="e539bde9-c68b-4bc4-bbba-8acc9e02be01">
                   <ui:Target.TimeoutMS>
@@ -195,8 +207,8 @@
                 </ui:Target>
               </ui:TypeInto.Target>
             </ui:TypeInto>
-            <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="4827,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-            <ui:ImageFound DisplayName="Image Exists 'wfica32.exe Primavera'" Found="[searchActivity]" sap:VirtualizedContainerService.HintSize="4827,106" sap2010:WorkflowViewState.IdRef="ImageFound_2">
+            <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="4928,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <ui:ImageFound DisplayName="Image Exists 'wfica32.exe Primavera'" Found="[searchActivity]" sap:VirtualizedContainerService.HintSize="4928,106" sap2010:WorkflowViewState.IdRef="ImageFound_2">
               <ui:ImageFound.Image>
                 <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAvCAYAAADnwTpeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFLSURBVFhH7ZTfaoMwFIf7Jn2UPUIfZbCn8K5XZY+ym8qQLUjp3BZEpHhTigMR6TYpoxeFs8SdxD9dUq06yvCDH3g4yUdMoiPoiUEs+WfiqfEI0+ctVs1QiyMXJjdzGLGMjSe4C3fYqEctscjVzAX/84AD9DQSi1zP33CQmrPEIrea/W8l5hkbr+DjlCKXKe58K/jhveMwFY3EnV+3bj8QRj+fdEsGsWQQSwax5HLE3ouTZf2h/8s1Ejv3JphmHh31xZvlkXi5xt4vtFpxZ+Kdb0vpA41Bt8uNxJQ4EDIbD3/uRLx1CXv1PVYAh9AB202wOqaWOI09sBcr+MJasFrY4MVplipaMbXyg1KJRZ+niFKc+qQ0iYcGQSmk0id+vvK/F3OKkywaZbegmIhapTGb/GxPH14SBlmErMo+CX/CmjyCk+JzGcSSnsQA3/Q8bZYVWbH+AAAAAElFTkSuQmCC" />
               </ui:ImageFound.Image>
@@ -213,92 +225,93 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:ImageFound>
-            <ui:GenerateDataTable ColumnSizes="{x:Null}" Positions="{x:Null}" AutoDetectTypes="False" CSVParsing="False" ColumnSeparators=" " DataTable="[dataTable]" DisplayName="Generate Data Table" sap:VirtualizedContainerService.HintSize="4827,51" sap2010:WorkflowViewState.IdRef="GenerateDataTable_2" Input="Index 1 2 3 4 5" NewLineSeparator=" " UseColumnHeader="True" />
-            <If Condition="[searchActivity]" sap:VirtualizedContainerService.HintSize="4827,2508" sap2010:WorkflowViewState.IdRef="If_10">
+            <ui:GenerateDataTable ColumnSizes="{x:Null}" Positions="{x:Null}" AutoDetectTypes="False" CSVParsing="False" ColumnSeparators=" " DataTable="[dataTable]" DisplayName="Generate Data Table" sap:VirtualizedContainerService.HintSize="4928,51" sap2010:WorkflowViewState.IdRef="GenerateDataTable_2" Input="Index 1 2 3 4 5" NewLineSeparator=" " UseColumnHeader="True" />
+            <If Condition="[searchActivity]" sap:VirtualizedContainerService.HintSize="4928,2689" sap2010:WorkflowViewState.IdRef="If_10">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="4234,2350" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                <Sequence sap:VirtualizedContainerService.HintSize="4335,2531" sap2010:WorkflowViewState.IdRef="Sequence_22">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dataTable]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="4192,2167" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                  <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dataTable]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="4293,2347" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
                     <ui:ForEachRow.Body>
                       <ActivityAction x:TypeArguments="sd:DataRow">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="sd:DataRow" Name="rowOcr" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="4142,2019" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="4243,2199" sap2010:WorkflowViewState.IdRef="Sequence_16">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               <x:Boolean x:Key="IsPinned">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <If Condition="[cint(rowOcr(0)) =  1]" sap:VirtualizedContainerService.HintSize="4100,1927" sap2010:WorkflowViewState.IdRef="If_15">
+                          <If Condition="[cint(rowOcr(0)) =  1]" sap:VirtualizedContainerService.HintSize="4201,2107" sap2010:WorkflowViewState.IdRef="If_15">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsPinned">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                             <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="755,1146" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                              <Sequence sap:VirtualizedContainerService.HintSize="797,1298" sap2010:WorkflowViewState.IdRef="Sequence_11">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <If Condition="[UpdateDateButton = false]" sap:VirtualizedContainerService.HintSize="713,423" sap2010:WorkflowViewState.IdRef="If_21">
+                                <If Condition="[UpdateDateButton = false]" sap:VirtualizedContainerService.HintSize="755,475" sap2010:WorkflowViewState.IdRef="If_21">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <If.Then>
-                                    <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="334,265" sap2010:WorkflowViewState.IdRef="GetOCRText_2">
-                                      <ui:GetOCRText.OCREngine>
-                                        <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
-                                          <ActivityFunc.Argument>
-                                            <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
-                                          </ActivityFunc.Argument>
-                                          <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="284,79" sap2010:WorkflowViewState.IdRef="GoogleOCR_2" Image="[Image]">
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                          </ui:GoogleOCR>
-                                        </ActivityFunc>
-                                      </ui:GetOCRText.OCREngine>
-                                      <ui:GetOCRText.Target>
-                                        <ui:Target Element="{x:Null}" Id="b293dea3-73f5-4036-9b1a-42d2a293e437" InformativeScreenshot="9cfb80262c77f64ce6e634c79f72005f" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Primavera - Timesheets - Google Chrome - \\Remote' /&gt;">
-                                          <ui:Target.ClippingRegion>
-                                            <ui:Region Rectangle="62, 302, 60, 26" />
-                                          </ui:Target.ClippingRegion>
-                                          <ui:Target.TimeoutMS>
-                                            <InArgument x:TypeArguments="x:Int32" />
-                                          </ui:Target.TimeoutMS>
-                                          <ui:Target.WaitForReady>
-                                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                                          </ui:Target.WaitForReady>
-                                        </ui:Target>
-                                      </ui:GetOCRText.Target>
-                                      <ui:GetOCRText.Text>
-                                        <OutArgument x:TypeArguments="x:String">[text]</OutArgument>
-                                      </ui:GetOCRText.Text>
+                                    <Sequence sap:VirtualizedContainerService.HintSize="376,317" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                      <Sequence.Variables>
+                                        <Variable x:TypeArguments="ui:Image" Name="image" />
+                                      </Sequence.Variables>
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                    </ui:GetOCRText>
+                                      <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="TakeScreenshot_1" Screenshot="[image]">
+                                        <ui:TakeScreenshot.Target>
+                                          <ui:Target Element="{x:Null}" Id="2e710992-9380-4c98-ae8f-dc48fe8237ed" InformativeScreenshot="326d6a1646ca57b9ca246689b50b7e8d" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Primavera - Timesheets - Google Chrome - \\Remote' /&gt;">
+                                            <ui:Target.ClippingRegion>
+                                              <ui:Region Rectangle="62, 301, 57, 28" />
+                                            </ui:Target.ClippingRegion>
+                                            <ui:Target.TimeoutMS>
+                                              <InArgument x:TypeArguments="x:Int32" />
+                                            </ui:Target.TimeoutMS>
+                                            <ui:Target.WaitForReady>
+                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                            </ui:Target.WaitForReady>
+                                          </ui:Target>
+                                        </ui:TakeScreenshot.Target>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:TakeScreenshot>
+                                      <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="GoogleOCR_12" Image="[image]" Text="[text]">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:GoogleOCR>
+                                    </Sequence>
                                   </If.Then>
                                   <If.Else>
                                     <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="334,265" sap2010:WorkflowViewState.IdRef="GetOCRText_7">
@@ -340,7 +353,7 @@
                                     </ui:GetOCRText>
                                   </If.Else>
                                 </If>
-                                <Assign sap:VirtualizedContainerService.HintSize="713,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                <Assign sap:VirtualizedContainerService.HintSize="755,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:String">[TextOcr]</OutArgument>
                                   </Assign.To>
@@ -348,7 +361,7 @@
                                     <InArgument x:TypeArguments="x:String">[text.Replace(" ","")]</InArgument>
                                   </Assign.Value>
                                 </Assign>
-                                <Assign sap:VirtualizedContainerService.HintSize="713,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                <Assign sap:VirtualizedContainerService.HintSize="755,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                                   <Assign.To>
                                     <OutArgument x:TypeArguments="x:String">[TextOcr]</OutArgument>
                                   </Assign.To>
@@ -356,7 +369,15 @@
                                     <InArgument x:TypeArguments="x:String">[TextOcr.Replace("-","")]</InArgument>
                                   </Assign.Value>
                                 </Assign>
-                                <If Condition="[TextOcr = row(7).ToString]" sap:VirtualizedContainerService.HintSize="713,391" sap2010:WorkflowViewState.IdRef="If_16">
+                                <Assign sap:VirtualizedContainerService.HintSize="755,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">[TextOcr]</OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">[TextOcr.Replace(".","")]</InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                                <If Condition="[TextOcr = row(7).ToString]" sap:VirtualizedContainerService.HintSize="755,391" sap2010:WorkflowViewState.IdRef="If_16">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsPinned">True</x:Boolean>
@@ -375,7 +396,7 @@
                                           <OutArgument x:TypeArguments="x:Int32">[Offset]</OutArgument>
                                         </Assign.To>
                                         <Assign.Value>
-                                          <InArgument x:TypeArguments="x:Int32">60</InArgument>
+                                          <InArgument x:TypeArguments="x:Int32">[60+UpdateDateButtonOffset]</InArgument>
                                         </Assign.Value>
                                       </Assign>
                                       <ui:Break sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Break_1" />
@@ -385,14 +406,14 @@
                               </Sequence>
                             </If.Then>
                             <If.Else>
-                              <If Condition="[cint(rowOcr(0)) =  2]" sap:VirtualizedContainerService.HintSize="3300,1769" sap2010:WorkflowViewState.IdRef="If_14">
+                              <If Condition="[cint(rowOcr(0)) =  2]" sap:VirtualizedContainerService.HintSize="3359,1949" sap2010:WorkflowViewState.IdRef="If_14">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="755,1118" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="797,1298" sap2010:WorkflowViewState.IdRef="Sequence_12">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:String" Name="variable1" />
                                     </Sequence.Variables>
@@ -402,44 +423,51 @@
                                         <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <If Condition="[UpdateDateButton = false]" sap:VirtualizedContainerService.HintSize="713,395" sap2010:WorkflowViewState.IdRef="If_22">
+                                    <If Condition="[UpdateDateButton = false]" sap:VirtualizedContainerService.HintSize="755,475" sap2010:WorkflowViewState.IdRef="If_22">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <If.Then>
-                                        <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="334,237" sap2010:WorkflowViewState.IdRef="GetOCRText_3">
-                                          <ui:GetOCRText.OCREngine>
-                                            <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
-                                              <ActivityFunc.Argument>
-                                                <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
-                                              </ActivityFunc.Argument>
-                                              <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="GoogleOCR_3" Image="[Image]" />
-                                            </ActivityFunc>
-                                          </ui:GetOCRText.OCREngine>
-                                          <ui:GetOCRText.Target>
-                                            <ui:Target Element="{x:Null}" Id="b293dea3-73f5-4036-9b1a-42d2a293e437" InformativeScreenshot="b4f1c78a05e942408c38567d248ed40d" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Primavera - Timesheets - Google Chrome - \\Remote' /&gt;">
-                                              <ui:Target.ClippingRegion>
-                                                <ui:Region Rectangle="61, 353, 58, 28" />
-                                              </ui:Target.ClippingRegion>
-                                              <ui:Target.TimeoutMS>
-                                                <InArgument x:TypeArguments="x:Int32" />
-                                              </ui:Target.TimeoutMS>
-                                              <ui:Target.WaitForReady>
-                                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                                              </ui:Target.WaitForReady>
-                                            </ui:Target>
-                                          </ui:GetOCRText.Target>
-                                          <ui:GetOCRText.Text>
-                                            <OutArgument x:TypeArguments="x:String">[text]</OutArgument>
-                                          </ui:GetOCRText.Text>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="376,317" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                                          <Sequence.Variables>
+                                            <Variable x:TypeArguments="ui:Image" Name="image" />
+                                          </Sequence.Variables>
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                        </ui:GetOCRText>
+                                          <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="TakeScreenshot_2" Screenshot="[image]">
+                                            <ui:TakeScreenshot.Target>
+                                              <ui:Target Element="{x:Null}" Id="2e710992-9380-4c98-ae8f-dc48fe8237ed" InformativeScreenshot="d107760ab856270ea51c7d141873d07c" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Primavera - Timesheets - Google Chrome - \\Remote' /&gt;">
+                                                <ui:Target.ClippingRegion>
+                                                  <ui:Region Rectangle="62, 354, 53, 26" />
+                                                </ui:Target.ClippingRegion>
+                                                <ui:Target.TimeoutMS>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:Target.TimeoutMS>
+                                                <ui:Target.WaitForReady>
+                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                </ui:Target.WaitForReady>
+                                              </ui:Target>
+                                            </ui:TakeScreenshot.Target>
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </ui:TakeScreenshot>
+                                          <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="GoogleOCR_13" Image="[image]" Text="[text]">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                          </ui:GoogleOCR>
+                                        </Sequence>
                                       </If.Then>
                                       <If.Else>
                                         <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="334,237" sap2010:WorkflowViewState.IdRef="GetOCRText_8">
@@ -475,7 +503,7 @@
                                         </ui:GetOCRText>
                                       </If.Else>
                                     </If>
-                                    <Assign sap:VirtualizedContainerService.HintSize="713,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                    <Assign sap:VirtualizedContainerService.HintSize="755,60" sap2010:WorkflowViewState.IdRef="Assign_3">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="x:String">[TextOcr]</OutArgument>
                                       </Assign.To>
@@ -483,7 +511,7 @@
                                         <InArgument x:TypeArguments="x:String">[text.Replace(" ","")]</InArgument>
                                       </Assign.Value>
                                     </Assign>
-                                    <Assign sap:VirtualizedContainerService.HintSize="713,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                    <Assign sap:VirtualizedContainerService.HintSize="755,60" sap2010:WorkflowViewState.IdRef="Assign_4">
                                       <Assign.To>
                                         <OutArgument x:TypeArguments="x:String">[TextOcr]</OutArgument>
                                       </Assign.To>
@@ -491,7 +519,15 @@
                                         <InArgument x:TypeArguments="x:String">[TextOcr.Replace("-","")]</InArgument>
                                       </Assign.Value>
                                     </Assign>
-                                    <If Condition="[TextOcr = row(7).ToString]" sap:VirtualizedContainerService.HintSize="713,391" sap2010:WorkflowViewState.IdRef="If_17">
+                                    <Assign sap:VirtualizedContainerService.HintSize="755,60" sap2010:WorkflowViewState.IdRef="Assign_18">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">[TextOcr]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">[TextOcr.Replace(".","")]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <If Condition="[TextOcr = row(7).ToString]" sap:VirtualizedContainerService.HintSize="755,391" sap2010:WorkflowViewState.IdRef="If_17">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsPinned">True</x:Boolean>
@@ -510,7 +546,7 @@
                                               <OutArgument x:TypeArguments="x:Int32">[Offset]</OutArgument>
                                             </Assign.To>
                                             <Assign.Value>
-                                              <InArgument x:TypeArguments="x:Int32">120</InArgument>
+                                              <InArgument x:TypeArguments="x:Int32">[120+UpdateDateButtonOffset]</InArgument>
                                             </Assign.Value>
                                           </Assign>
                                           <ui:Break sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Break_2" />
@@ -520,58 +556,65 @@
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
-                                  <If Condition="[cint(rowOcr(0)) =  3]" sap:VirtualizedContainerService.HintSize="2500,1611" sap2010:WorkflowViewState.IdRef="If_13">
+                                  <If Condition="[cint(rowOcr(0)) =  3]" sap:VirtualizedContainerService.HintSize="2517,1791" sap2010:WorkflowViewState.IdRef="If_13">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
                                     <If.Then>
-                                      <Sequence sap:VirtualizedContainerService.HintSize="755,1118" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                      <Sequence sap:VirtualizedContainerService.HintSize="797,1298" sap2010:WorkflowViewState.IdRef="Sequence_13">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <If Condition="[UpdateDateButton = false]" sap:VirtualizedContainerService.HintSize="713,395" sap2010:WorkflowViewState.IdRef="If_23">
+                                        <If Condition="[UpdateDateButton = false]" sap:VirtualizedContainerService.HintSize="755,475" sap2010:WorkflowViewState.IdRef="If_23">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                           <If.Then>
-                                            <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="334,237" sap2010:WorkflowViewState.IdRef="GetOCRText_4">
-                                              <ui:GetOCRText.OCREngine>
-                                                <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
-                                                  <ActivityFunc.Argument>
-                                                    <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
-                                                  </ActivityFunc.Argument>
-                                                  <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="GoogleOCR_4" Image="[Image]" />
-                                                </ActivityFunc>
-                                              </ui:GetOCRText.OCREngine>
-                                              <ui:GetOCRText.Target>
-                                                <ui:Target Element="{x:Null}" Id="b293dea3-73f5-4036-9b1a-42d2a293e437" InformativeScreenshot="530454716efeee262dbcd82aac1e3c8d" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Primavera - Timesheets - Google Chrome - \\Remote' /&gt;">
-                                                  <ui:Target.ClippingRegion>
-                                                    <ui:Region Rectangle="63, 408, 60, 26" />
-                                                  </ui:Target.ClippingRegion>
-                                                  <ui:Target.TimeoutMS>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:Target.TimeoutMS>
-                                                  <ui:Target.WaitForReady>
-                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                  </ui:Target.WaitForReady>
-                                                </ui:Target>
-                                              </ui:GetOCRText.Target>
-                                              <ui:GetOCRText.Text>
-                                                <OutArgument x:TypeArguments="x:String">[text]</OutArgument>
-                                              </ui:GetOCRText.Text>
+                                            <Sequence sap:VirtualizedContainerService.HintSize="376,317" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                              <Sequence.Variables>
+                                                <Variable x:TypeArguments="ui:Image" Name="image" />
+                                              </Sequence.Variables>
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                            </ui:GetOCRText>
+                                              <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="TakeScreenshot_3" Screenshot="[image]">
+                                                <ui:TakeScreenshot.Target>
+                                                  <ui:Target Element="{x:Null}" Id="2e710992-9380-4c98-ae8f-dc48fe8237ed" InformativeScreenshot="39ceebb4f1acf65c89dd6d92c568493a" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Primavera - Timesheets - Google Chrome - \\Remote' /&gt;">
+                                                    <ui:Target.ClippingRegion>
+                                                      <ui:Region Rectangle="60, 407, 61, 26" />
+                                                    </ui:Target.ClippingRegion>
+                                                    <ui:Target.TimeoutMS>
+                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                    </ui:Target.TimeoutMS>
+                                                    <ui:Target.WaitForReady>
+                                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                    </ui:Target.WaitForReady>
+                                                  </ui:Target>
+                                                </ui:TakeScreenshot.Target>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </ui:TakeScreenshot>
+                                              <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="GoogleOCR_14" Image="[image]" Text="[text]">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </ui:GoogleOCR>
+                                            </Sequence>
                                           </If.Then>
                                           <If.Else>
                                             <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="334,237" sap2010:WorkflowViewState.IdRef="GetOCRText_9">
@@ -607,7 +650,7 @@
                                             </ui:GetOCRText>
                                           </If.Else>
                                         </If>
-                                        <Assign sap:VirtualizedContainerService.HintSize="713,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                        <Assign sap:VirtualizedContainerService.HintSize="755,60" sap2010:WorkflowViewState.IdRef="Assign_5">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="x:String">[TextOcr]</OutArgument>
                                           </Assign.To>
@@ -615,7 +658,7 @@
                                             <InArgument x:TypeArguments="x:String">[text.Replace(" ","")]</InArgument>
                                           </Assign.Value>
                                         </Assign>
-                                        <Assign sap:VirtualizedContainerService.HintSize="713,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                        <Assign sap:VirtualizedContainerService.HintSize="755,60" sap2010:WorkflowViewState.IdRef="Assign_6">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="x:String">[TextOcr]</OutArgument>
                                           </Assign.To>
@@ -623,7 +666,15 @@
                                             <InArgument x:TypeArguments="x:String">[TextOcr.Replace("-","")]</InArgument>
                                           </Assign.Value>
                                         </Assign>
-                                        <If Condition="[TextOcr = row(7).ToString]" sap:VirtualizedContainerService.HintSize="713,391" sap2010:WorkflowViewState.IdRef="If_18">
+                                        <Assign sap:VirtualizedContainerService.HintSize="755,60" sap2010:WorkflowViewState.IdRef="Assign_19">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[TextOcr]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">[TextOcr.Replace(".","")]</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                        <If Condition="[TextOcr = row(7).ToString]" sap:VirtualizedContainerService.HintSize="755,391" sap2010:WorkflowViewState.IdRef="If_18">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsPinned">True</x:Boolean>
@@ -642,7 +693,7 @@
                                                   <OutArgument x:TypeArguments="x:Int32">[Offset]</OutArgument>
                                                 </Assign.To>
                                                 <Assign.Value>
-                                                  <InArgument x:TypeArguments="x:Int32">170</InArgument>
+                                                  <InArgument x:TypeArguments="x:Int32">[170+UpdateDateButtonOffset]</InArgument>
                                                 </Assign.Value>
                                               </Assign>
                                               <ui:Break sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Break_3" />
@@ -652,58 +703,65 @@
                                       </Sequence>
                                     </If.Then>
                                     <If.Else>
-                                      <If Condition="[cint(rowOcr(0)) =  4]" sap:VirtualizedContainerService.HintSize="1700,1453" sap2010:WorkflowViewState.IdRef="If_12">
+                                      <If Condition="[cint(rowOcr(0)) =  4]" sap:VirtualizedContainerService.HintSize="1675,1633" sap2010:WorkflowViewState.IdRef="If_12">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
                                         <If.Then>
-                                          <Sequence sap:VirtualizedContainerService.HintSize="755,1118" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                          <Sequence sap:VirtualizedContainerService.HintSize="797,1298" sap2010:WorkflowViewState.IdRef="Sequence_14">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <If Condition="[UpdateDateButton = false]" sap:VirtualizedContainerService.HintSize="713,395" sap2010:WorkflowViewState.IdRef="If_24">
+                                            <If Condition="[UpdateDateButton = false]" sap:VirtualizedContainerService.HintSize="755,475" sap2010:WorkflowViewState.IdRef="If_24">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                               <If.Then>
-                                                <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="334,237" sap2010:WorkflowViewState.IdRef="GetOCRText_5">
-                                                  <ui:GetOCRText.OCREngine>
-                                                    <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
-                                                      <ActivityFunc.Argument>
-                                                        <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
-                                                      </ActivityFunc.Argument>
-                                                      <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="GoogleOCR_5" Image="[Image]" />
-                                                    </ActivityFunc>
-                                                  </ui:GetOCRText.OCREngine>
-                                                  <ui:GetOCRText.Target>
-                                                    <ui:Target Element="{x:Null}" Id="b293dea3-73f5-4036-9b1a-42d2a293e437" InformativeScreenshot="55cd714380256c185d89910a4b425b05" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Primavera - Timesheets - Google Chrome - \\Remote' /&gt;">
-                                                      <ui:Target.ClippingRegion>
-                                                        <ui:Region Rectangle="61, 460, 58, 25" />
-                                                      </ui:Target.ClippingRegion>
-                                                      <ui:Target.TimeoutMS>
-                                                        <InArgument x:TypeArguments="x:Int32" />
-                                                      </ui:Target.TimeoutMS>
-                                                      <ui:Target.WaitForReady>
-                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                      </ui:Target.WaitForReady>
-                                                    </ui:Target>
-                                                  </ui:GetOCRText.Target>
-                                                  <ui:GetOCRText.Text>
-                                                    <OutArgument x:TypeArguments="x:String">[text]</OutArgument>
-                                                  </ui:GetOCRText.Text>
+                                                <Sequence sap:VirtualizedContainerService.HintSize="376,317" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                                                  <Sequence.Variables>
+                                                    <Variable x:TypeArguments="ui:Image" Name="image" />
+                                                  </Sequence.Variables>
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                </ui:GetOCRText>
+                                                  <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="TakeScreenshot_4" Screenshot="[image]">
+                                                    <ui:TakeScreenshot.Target>
+                                                      <ui:Target Element="{x:Null}" Id="2e710992-9380-4c98-ae8f-dc48fe8237ed" InformativeScreenshot="616e7747afccd3a67ae37ba2d710cc30" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Primavera - Timesheets - Google Chrome - \\Remote' /&gt;">
+                                                        <ui:Target.ClippingRegion>
+                                                          <ui:Region Rectangle="63, 459, 57, 30" />
+                                                        </ui:Target.ClippingRegion>
+                                                        <ui:Target.TimeoutMS>
+                                                          <InArgument x:TypeArguments="x:Int32" />
+                                                        </ui:Target.TimeoutMS>
+                                                        <ui:Target.WaitForReady>
+                                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                        </ui:Target.WaitForReady>
+                                                      </ui:Target>
+                                                    </ui:TakeScreenshot.Target>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </ui:TakeScreenshot>
+                                                  <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="GoogleOCR_15" Image="[image]" Text="[text]">
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </ui:GoogleOCR>
+                                                </Sequence>
                                               </If.Then>
                                               <If.Else>
                                                 <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="334,237" sap2010:WorkflowViewState.IdRef="GetOCRText_10">
@@ -739,7 +797,7 @@
                                                 </ui:GetOCRText>
                                               </If.Else>
                                             </If>
-                                            <Assign sap:VirtualizedContainerService.HintSize="713,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                            <Assign sap:VirtualizedContainerService.HintSize="755,60" sap2010:WorkflowViewState.IdRef="Assign_7">
                                               <Assign.To>
                                                 <OutArgument x:TypeArguments="x:String">[TextOcr]</OutArgument>
                                               </Assign.To>
@@ -747,12 +805,20 @@
                                                 <InArgument x:TypeArguments="x:String">[text.Replace(" ","")]</InArgument>
                                               </Assign.Value>
                                             </Assign>
-                                            <Assign sap:VirtualizedContainerService.HintSize="713,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                            <Assign sap:VirtualizedContainerService.HintSize="755,60" sap2010:WorkflowViewState.IdRef="Assign_8">
                                               <Assign.To>
                                                 <OutArgument x:TypeArguments="x:String">[TextOcr]</OutArgument>
                                               </Assign.To>
                                               <Assign.Value>
                                                 <InArgument x:TypeArguments="x:String">[TextOcr.Replace("-","")]</InArgument>
+                                              </Assign.Value>
+                                            </Assign>
+                                            <Assign sap:VirtualizedContainerService.HintSize="755,60" sap2010:WorkflowViewState.IdRef="Assign_20">
+                                              <Assign.To>
+                                                <OutArgument x:TypeArguments="x:String">[TextOcr]</OutArgument>
+                                              </Assign.To>
+                                              <Assign.Value>
+                                                <InArgument x:TypeArguments="x:String">[TextOcr.Replace(".","")]</InArgument>
                                               </Assign.Value>
                                             </Assign>
                                             <If Condition="[TextOcr = row(7).ToString]" sap:VirtualizedContainerService.HintSize="713,391" sap2010:WorkflowViewState.IdRef="If_19">
@@ -774,7 +840,7 @@
                                                       <OutArgument x:TypeArguments="x:Int32">[Offset]</OutArgument>
                                                     </Assign.To>
                                                     <Assign.Value>
-                                                      <InArgument x:TypeArguments="x:Int32">220</InArgument>
+                                                      <InArgument x:TypeArguments="x:Int32">[220+UpdateDateButtonOffset]</InArgument>
                                                     </Assign.Value>
                                                   </Assign>
                                                   <ui:Break sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Break_4" />
@@ -784,58 +850,65 @@
                                           </Sequence>
                                         </If.Then>
                                         <If.Else>
-                                          <If Condition="[cint(rowOcr(0)) =  5]" sap:VirtualizedContainerService.HintSize="900,1295" sap2010:WorkflowViewState.IdRef="If_11">
+                                          <If Condition="[cint(rowOcr(0)) =  5]" sap:VirtualizedContainerService.HintSize="833,1475" sap2010:WorkflowViewState.IdRef="If_11">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                             <If.Then>
-                                              <Sequence sap:VirtualizedContainerService.HintSize="755,1118" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                              <Sequence sap:VirtualizedContainerService.HintSize="797,1298" sap2010:WorkflowViewState.IdRef="Sequence_15">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <If Condition="[UpdateDateButton = false]" sap:VirtualizedContainerService.HintSize="713,395" sap2010:WorkflowViewState.IdRef="If_25">
+                                                <If Condition="[UpdateDateButton = false]" sap:VirtualizedContainerService.HintSize="755,475" sap2010:WorkflowViewState.IdRef="If_25">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                   <If.Then>
-                                                    <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="334,237" sap2010:WorkflowViewState.IdRef="GetOCRText_6">
-                                                      <ui:GetOCRText.OCREngine>
-                                                        <ActivityFunc x:TypeArguments="sd1:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
-                                                          <ActivityFunc.Argument>
-                                                            <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
-                                                          </ActivityFunc.Argument>
-                                                          <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="GoogleOCR_6" Image="[Image]" />
-                                                        </ActivityFunc>
-                                                      </ui:GetOCRText.OCREngine>
-                                                      <ui:GetOCRText.Target>
-                                                        <ui:Target Element="{x:Null}" Id="b293dea3-73f5-4036-9b1a-42d2a293e437" InformativeScreenshot="7362ca84b853ac76abf4356ed4eecb60" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Primavera - Timesheets - Google Chrome - \\Remote' /&gt;">
-                                                          <ui:Target.ClippingRegion>
-                                                            <ui:Region Rectangle="60, 513, 65, 27" />
-                                                          </ui:Target.ClippingRegion>
-                                                          <ui:Target.TimeoutMS>
-                                                            <InArgument x:TypeArguments="x:Int32" />
-                                                          </ui:Target.TimeoutMS>
-                                                          <ui:Target.WaitForReady>
-                                                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                          </ui:Target.WaitForReady>
-                                                        </ui:Target>
-                                                      </ui:GetOCRText.Target>
-                                                      <ui:GetOCRText.Text>
-                                                        <OutArgument x:TypeArguments="x:String">[text]</OutArgument>
-                                                      </ui:GetOCRText.Text>
+                                                    <Sequence sap:VirtualizedContainerService.HintSize="376,317" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                                                      <Sequence.Variables>
+                                                        <Variable x:TypeArguments="ui:Image" Name="image" />
+                                                      </Sequence.Variables>
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                           <x:Boolean x:Key="IsPinned">True</x:Boolean>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                    </ui:GetOCRText>
+                                                      <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="Take Screenshot 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="TakeScreenshot_5" Screenshot="[image]">
+                                                        <ui:TakeScreenshot.Target>
+                                                          <ui:Target Element="{x:Null}" Id="2e710992-9380-4c98-ae8f-dc48fe8237ed" InformativeScreenshot="5073218fddb70c70810d45b1080f80f8" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Primavera - Timesheets - Google Chrome - \\Remote' /&gt;">
+                                                            <ui:Target.ClippingRegion>
+                                                              <ui:Region Rectangle="61, 514, 59, 25" />
+                                                            </ui:Target.ClippingRegion>
+                                                            <ui:Target.TimeoutMS>
+                                                              <InArgument x:TypeArguments="x:Int32" />
+                                                            </ui:Target.TimeoutMS>
+                                                            <ui:Target.WaitForReady>
+                                                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                            </ui:Target.WaitForReady>
+                                                          </ui:Target>
+                                                        </ui:TakeScreenshot.Target>
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </ui:TakeScreenshot>
+                                                      <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="GoogleOCR_16" Image="[image]" Text="[text]">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                      </ui:GoogleOCR>
+                                                    </Sequence>
                                                   </If.Then>
                                                   <If.Else>
                                                     <ui:GetOCRText WordsInfo="{x:Null}" DisplayName="Get OCR Text 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="334,237" sap2010:WorkflowViewState.IdRef="GetOCRText_11">
@@ -871,7 +944,7 @@
                                                     </ui:GetOCRText>
                                                   </If.Else>
                                                 </If>
-                                                <Assign sap:VirtualizedContainerService.HintSize="713,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                                                <Assign sap:VirtualizedContainerService.HintSize="755,60" sap2010:WorkflowViewState.IdRef="Assign_9">
                                                   <Assign.To>
                                                     <OutArgument x:TypeArguments="x:String">[TextOcr]</OutArgument>
                                                   </Assign.To>
@@ -879,12 +952,20 @@
                                                     <InArgument x:TypeArguments="x:String">[text.Replace(" ","")]</InArgument>
                                                   </Assign.Value>
                                                 </Assign>
-                                                <Assign sap:VirtualizedContainerService.HintSize="713,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                                <Assign sap:VirtualizedContainerService.HintSize="755,60" sap2010:WorkflowViewState.IdRef="Assign_10">
                                                   <Assign.To>
                                                     <OutArgument x:TypeArguments="x:String">[TextOcr]</OutArgument>
                                                   </Assign.To>
                                                   <Assign.Value>
                                                     <InArgument x:TypeArguments="x:String">[TextOcr.Replace("-","")]</InArgument>
+                                                  </Assign.Value>
+                                                </Assign>
+                                                <Assign sap:VirtualizedContainerService.HintSize="713,60" sap2010:WorkflowViewState.IdRef="Assign_21">
+                                                  <Assign.To>
+                                                    <OutArgument x:TypeArguments="x:String">[TextOcr]</OutArgument>
+                                                  </Assign.To>
+                                                  <Assign.Value>
+                                                    <InArgument x:TypeArguments="x:String">[TextOcr.Replace(".","")]</InArgument>
                                                   </Assign.Value>
                                                 </Assign>
                                                 <If Condition="[TextOcr = row(7).ToString]" sap:VirtualizedContainerService.HintSize="713,391" sap2010:WorkflowViewState.IdRef="If_20">
@@ -906,7 +987,7 @@
                                                           <OutArgument x:TypeArguments="x:Int32">[Offset]</OutArgument>
                                                         </Assign.To>
                                                         <Assign.Value>
-                                                          <InArgument x:TypeArguments="x:Int32">270</InArgument>
+                                                          <InArgument x:TypeArguments="x:Int32">[270+UpdateDateButtonOffset]</InArgument>
                                                         </Assign.Value>
                                                       </Assign>
                                                       <ui:Break sap:VirtualizedContainerService.HintSize="262,22" sap2010:WorkflowViewState.IdRef="Break_5" />
@@ -934,7 +1015,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:ForEachRow>
-                  <If Condition="[row(2).ToString = &quot;Sun&quot;]" sap:VirtualizedContainerService.HintSize="2938,51" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If Condition="[row(2).ToString = &quot;Sun&quot;]" sap:VirtualizedContainerService.HintSize="4083,52" sap2010:WorkflowViewState.IdRef="If_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1390,7 +1471,7 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="548,1047" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                <Sequence sap:VirtualizedContainerService.HintSize="548,1192" sap2010:WorkflowViewState.IdRef="Sequence_23">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1496,16 +1577,47 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </ui:ExcelApplicationScope>
-                  <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;The code &quot;&amp; row(6).ToString &amp; &quot; is missing in Primavera for your user&quot;]" DisplayName="Send SMTP Mail Message" Email="[emailreal]" EnableSSL="True" From="[emailreal]" sap:VirtualizedContainerService.HintSize="506,145" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" Name="[nameIT]" Password="[passwordreal]" Port="25" SecureConnection="Auto" Server="smtp.office365.com" Subject="Missing code in Primavera" To="[EmailSend]">
-                    <ui:SendMail.Files>
-                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
-                    </ui:SendMail.Files>
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="506,290" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsPinned">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                  </ui:SendMail>
+                    <TryCatch.Try>
+                      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;The code &quot;&amp; row(6).ToString &amp; &quot; is missing in Primavera for your user&quot;]" DisplayName="Send SMTP Mail Message" Email="[emailreal]" EnableSSL="True" From="[emailreal]" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" Name="[nameIT]" Password="[passwordreal]" Port="25" SecureConnection="Auto" Server="smtp.office365.com" Subject="Missing code in Primavera" To="[EmailSend]">
+                        <ui:SendMail.Files>
+                          <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                        </ui:SendMail.Files>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:SendMail>
+                    </TryCatch.Try>
+                    <TryCatch.Catches>
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,128" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ActivityAction x:TypeArguments="s:Exception">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                          </ActivityAction.Argument>
+                          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;The code &quot;&amp; row(6).ToString &amp; &quot; is missing in Primavera for your user&quot;]">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:MessageBox>
+                        </ActivityAction>
+                      </Catch>
+                    </TryCatch.Catches>
+                  </TryCatch>
                 </Sequence>
               </If.Else>
             </If>
