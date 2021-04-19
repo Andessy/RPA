@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1342,3719</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1125,3524</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LoadActivity_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -76,10 +76,9 @@
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="LoadActivity" sap:VirtualizedContainerService.HintSize="1352,3514" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="LoadActivity" sap:VirtualizedContainerService.HintSize="1118,3359" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dataTableActivities" />
       <Variable x:TypeArguments="x:Boolean" Default="False" Name="buttonAdd" />
@@ -91,7 +90,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:FilterDataTable DataTable="[dataTablePrimavera]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="1310,59" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[dataTableUserActivities]" SelectColumnsMode="Keep">
+    <ui:FilterDataTable DataTable="[dataTablePrimavera]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="1076,59" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[dataTableUserActivities]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -110,13 +109,13 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="out_dt=in_dt.DefaultView.ToTable(True,&quot;Project_Activity&quot;)" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="1310,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="out_dt=in_dt.DefaultView.ToTable(True,&quot;Project_Activity&quot;)" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="1076,164" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
       <ui:InvokeCode.Arguments>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt">[dataTableUserActivities]</InArgument>
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt">[dataTableActivities]</OutArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
-    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="1310,106" sap2010:WorkflowViewState.IdRef="ClickImage_14" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="1076,106" sap2010:WorkflowViewState.IdRef="ClickImage_14" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:ClickImage.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -141,7 +140,7 @@
         </ui:Target>
       </ui:ClickImage.Target>
     </ui:ClickImage>
-    <If Condition="[dataTableActivities.rows.count = 0]" sap:VirtualizedContainerService.HintSize="1310,2973" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[dataTableActivities.rows.count = 0]" sap:VirtualizedContainerService.HintSize="1076,2818" sap2010:WorkflowViewState.IdRef="If_1">
       <If.Then>
         <Sequence sap:VirtualizedContainerService.HintSize="376,325" sap2010:WorkflowViewState.IdRef="Sequence_9">
           <sap:WorkflowViewStateService.ViewState>
@@ -149,15 +148,19 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_9" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_16" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:ClickImage.CursorPosition>
-              <ui:CursorPosition OffsetX="-20" OffsetY="20" Position="TopRight" />
+              <ui:CursorPosition OffsetX="700" Position="Center">
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
             </ui:ClickImage.CursorPosition>
             <ui:ClickImage.Image>
-              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGwAAAAhCAYAAAA8oE5/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASaSURBVGhD7ZjPa9tIFID77+XgiwvJwYEEvKGYEAdcqA86xFCBEcYUaogPPiQHgVOMW+xABcrBhRAa0yUhXoKhDelh+3+8fW+kkTXjGUtKN2kEc/ggHj2NRu+bH095cffvLzDkByMsZxhhOcMIyxlGWM4wwnKGEZYzjLCcYYTlDCMsZ6QW5tbLsPayDHvDufK6lkkL76vD8Y3iWpyUcTaOgcaxisRnxWHPLYM9UVxbwdTvQGN4vWh7YD9ZSSfsdgB7L3eDhFR66hgdjyGscgB2+52WpxBG46icPFNhF+5rHEwT3FETCijOOVfHKXkMYe0z5bWnZEnYE5FKWHcHk2R9gtm9B9ZGGQq2p4wjju3XUMQYonI40YpIGyeTRdgHC2PlPm8/QY3eodaHKf1WrIwr3O72dl7h5MQ4pFTvwPjmZ3D9pg8VGkMM1r/cD3+fy6/Cu65TX7dhTAzXqUcxW3YfvlwGz5FXbLKw8w4U8cbaKDi7vDYN0gJX8VBnG69t7MMb9xTGoz40qq8YctLSxqnItMIouSQHJxtvYxI3DuADH7+U6Dn+pvf9q9ED1/dgPOzCHhtvEz7eY8z9NXh+l91TcgYw9icwpXaNMKJkdVlf7uEBlHA88rFyXAvyUTvE/sJ8FLZ3GZmFkSB6ATZYamMDsZaKj6uhhe30gB9CuywibZwOJmwVuHLi8dMTi60S6/MPuBodRH9HMVKi2YSsHgWrj3OJglCY44erDFnaEjXCio4HM/zNmZ4EEpPywSTG+wtJFMa3wHmszdnEzqRZ8tHGtp0eXMTaiPnnpjDAtHE6mLBVRYeL26t0D3v57X0GT2B0XUp0cF7v4upfvYrTCStDww9EiXH1KI6teEU+7nypv5CVwgL7NCN/CsLO3lPFKBYfLCn2qRBHiCKuU8bpybQlcvi5g8LG31UJFBPTZqsd40NoqzrjZ1hIFmFRjCKuV8Vn4CQSYohwzJmE8W8vHfHiQyfi7u8exiYLE+P0PETYDCcDvTxB22GSMGJ+cw7uUVMoPuLbVlphcr+PJwwTuIU3FKweHqx4+ErYFZK2KD6YCFzaqVZYYpyehwgLtvUBuLQdU/GAqyy6rktsnNtTaNAxECte/ldhmA8hhkBhwSQR27XCLo72mTDdN1ewXVqw5X5jv2ejt/iAXdwCVIfnQkTaOB1ZhbEzk1eFvKTHFR7FCAnECWVhdVYfLK6HPJYwXdFB484kjBcWS4dhDJq5a5ud6DdLOi9P/QE40Vkgikgbp4IJS/hPR28SVLC0FdJLxxMbVGmxSlFKIK8qS9Y7OB55DKcenNn2RKwS1yotLNfDIueBwgi2yqR8FGhiIamF0aCT/m/Iig8UFl+F4/cWrOODGPSROKQBLotIGyfDEpUAE/TdC1ZFTSrRkS5t55stVoCoEngxaglnV7HSxA9gMRfTURO2cOwEu/c3hBHxj2v24YxjyCTM8Gcxwp4ptEsVdxbHCmfs4FmKwjyp3Qj705x3YJ223morOjPb1v7S2csxwp4Bs8s+WFVcUSQOKWJR1fb/UcYaYTnDCMsZRljOMMJyhhGWM4ywXPEL/gMRtfKzB23h/wAAAABJRU5ErkJggg==" />
             </ui:ClickImage.Image>
             <ui:ClickImage.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5809912e-1240-46f0-b8f1-d72f8bf504b2" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Primavera - Timesheets - Google Chrome - \\Remote' /&gt;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="695ecdb7-1596-4601-8e81-c9c25ad52594" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Primavera - Timesheets - Google Chrome - \\Remote' /&gt;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -175,25 +178,25 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="889,2813" sap2010:WorkflowViewState.IdRef="Sequence_10">
+        <Sequence sap:VirtualizedContainerService.HintSize="655,2660" sap2010:WorkflowViewState.IdRef="Sequence_10">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dataTableActivities]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="847,1476" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+          <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[dataTableActivities]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="613,1326" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="797,1327" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="563,1178" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="755,106" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="521,106" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT">
                     <ui:ClickImage.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -218,7 +221,7 @@
                       </ui:Target>
                     </ui:ClickImage.Target>
                   </ui:ClickImage>
-                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="755,117" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="tab" KeyModifiers="None" SpecialKey="True">
+                  <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="521,116" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="tab" KeyModifiers="None" SpecialKey="True">
                     <ui:SendHotkey.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="1b664a5f-ab44-4cd2-b88a-10f7e1072262">
                         <ui:Target.TimeoutMS>
@@ -230,7 +233,7 @@
                       </ui:Target>
                     </ui:SendHotkey.Target>
                   </ui:SendHotkey>
-                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into" sap:VirtualizedContainerService.HintSize="755,96" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[row(0).ToString]">
+                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into" sap:VirtualizedContainerService.HintSize="521,96" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[row(0).ToString]">
                     <ui:TypeInto.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="bde19929-7d60-460e-83db-feb1e0a0d076">
                         <ui:Target.TimeoutMS>
@@ -242,7 +245,7 @@
                       </ui:Target>
                     </ui:TypeInto.Target>
                   </ui:TypeInto>
-                  <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="755,106" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="521,106" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT">
                     <ui:ClickImage.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
@@ -267,7 +270,7 @@
                       </ui:Target>
                     </ui:ClickImage.Target>
                   </ui:ClickImage>
-                  <ui:ImageFound DisplayName="Image Exists 'wfica32.exe Primavera'" Found="[searchActivity]" sap:VirtualizedContainerService.HintSize="755,106" sap2010:WorkflowViewState.IdRef="ImageFound_2">
+                  <ui:ImageFound DisplayName="Image Exists 'wfica32.exe Primavera'" Found="[searchActivity]" sap:VirtualizedContainerService.HintSize="521,106" sap2010:WorkflowViewState.IdRef="ImageFound_2">
                     <ui:ImageFound.Image>
                       <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOMAAAAdCAYAAABYFtslAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM/SURBVHhe7ZjNceMwDIVdrbpQGTrmlvseVYZr8MkFuAAtAYIkCIGK42jXmMn7ZjAbUSD49x6V7OXxeGzvio/PP247AvEb40KGQCAQ7w+YEYEIEpfb7ba9K2gCXjsC8Rvjsr0RMiMAIAMzAhAEmBGAIMCMAAQBZgQgCDAjAEGAGQEIAswIQBBgRgCCADO+yDJN27Rc5SlzX+ddW0ju6zZPy/buma7ztOXtuqb9nLf1zs1PQ/0n5xxO57qkcf79fsGML8JmNAKCGb/HT824/K81wIyxIfEsSzLfvEqLY0Y+RLm9VZ6l3vApZq3Ig/75MpAoY7LJ5hplJjqX28SMK81X2l0jePW4Lc2T+/UCdddBa0hzL+XbHt3FjPnfbh563Sn0GAW9Ju4zmtdwfHqV8pel9dN7rOotKQdmDEy+yYugcltnRjnM/CiCK+8U1sD1thcjZE33/ennKnad142ZcedXhCY1SJRasBWnHpmgPJd+xHAdX5qRWvWXsf9KUn53QSn6Pvv1yMNgfMnr9rutbVcPZoxLFQLf4vmgOkEqEfCRqjyNFXGB223/IjCDNaNoSJ4dEdk8I9iKl6frqfqjddjaLe85Mx5R8+w6+Vmdjzs+vUomU3Ou83HrOft4MjDji2jB0KHSLaoPememgwPNN2+Oog3uL206+DWbom93RWnNU/Dyhmbc13PH5tetrWp8aIaRGRM8btpTqpX6jqh9nHV27w7MqL+6dT623sHZnQnM+CJ78cjfkEWFSgSclp6fOdBSV4vGon9VJOpcrGjS8+lm9PIcRmZoX6MDMyqO96Gt25rn6/Hzz64ZnXowY2CseOqXrAiHDzAfLqXRQXuisoKgupzF/dsYLCIWVf77qA2TLgElSisam8s1bN6zZkzs6sn74TqotloH9T80oxmTxtB1Ne0M8p6UvLZX/DAYP+e5ZpS56XowY2CaEBo7w7EQUhuFJ3aBBSKhu3f9U5RX1fgp5vXaROSYJ7eRmCg/v/uJGXU9Cr0Ho3WwOaSd/wc3T7YzI++d7Kle3/G+qTNw1lnwx8/tvhkTep2r2gdvT04CZgQgCDAjAEGAGQEIAswIQBBgRgCCADMCEASYEYAQbNtfZMSXjb4DQqIAAAAASUVORK5CYII=" />
                     </ui:ImageFound.Image>
@@ -279,36 +282,9 @@
                       </ui:Target>
                     </ui:ImageFound.Target>
                   </ui:ImageFound>
-                  <If Condition="[searchActivity]" sap:VirtualizedContainerService.HintSize="755,504" sap2010:WorkflowViewState.IdRef="If_3">
-                    <If.Then>
-                      <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_11" KeyModifiers="None" MouseButton="BTN_LEFT">
-                        <ui:ClickImage.CursorPosition>
-                          <ui:CursorPosition Position="Center">
-                            <ui:CursorPosition.OffsetX>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:CursorPosition.OffsetX>
-                            <ui:CursorPosition.OffsetY>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:CursorPosition.OffsetY>
-                          </ui:CursorPosition>
-                        </ui:ClickImage.CursorPosition>
-                        <ui:ClickImage.Image>
-                          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAlCAYAAAAjt+tHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD0SURBVFhH7dcxCoMwFMZxr9qxJ+hZXAXBI7gJTt7BTXDOEDKJvPpMQsVKfC8RU0r+kCVDvx8iSDMpJcQ8CZAA2eP5gpgnE0JAzJPN8wx3nq8nADeXADyA6KDKS2jHyVzQm8YWyryCTpgLEw+wpIZm+SEeQo+X0AzK3HxiAzAOwjWOeQEwCuJsHPMGYC4EZRwLAmBHCOo4FgzAtgjOOHYJANOIfD3Ucew/APqxF1D3ClRfQ7F7J1wFA7bjNg4iCHA0bqMivAGucRsF4QWgjNvOEGwAZ9zmQvAA6+eYN27TiAs+x1eXAAnwe4D9xd0n/T2PDJDwBg355atVt8loAAAAAElFTkSuQmCC" />
-                        </ui:ClickImage.Image>
-                        <ui:ClickImage.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9324efc0-2b37-4938-b0e6-628c0f32ee1e" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Primavera - Timesheets - Google Chrome - \\Remote' /&gt;">
-                            <ui:Target.TimeoutMS>
-                              <InArgument x:TypeArguments="x:Int32" />
-                            </ui:Target.TimeoutMS>
-                            <ui:Target.WaitForReady>
-                              <InArgument x:TypeArguments="ui:WaitForReady" />
-                            </ui:Target.WaitForReady>
-                          </ui:Target>
-                        </ui:ClickImage.Target>
-                      </ui:ClickImage>
-                    </If.Then>
+                  <If Condition="[searchActivity]" sap:VirtualizedContainerService.HintSize="521,356" sap2010:WorkflowViewState.IdRef="If_3">
                     <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="376,344" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                      <Sequence sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_11">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -339,31 +315,6 @@
                             </ui:Target>
                           </ui:ClickImage.Target>
                         </ui:ClickImage>
-                        <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_4" KeyModifiers="None" MouseButton="BTN_LEFT">
-                          <ui:ClickImage.CursorPosition>
-                            <ui:CursorPosition Position="Center">
-                              <ui:CursorPosition.OffsetX>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetX>
-                              <ui:CursorPosition.OffsetY>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetY>
-                            </ui:CursorPosition>
-                          </ui:ClickImage.CursorPosition>
-                          <ui:ClickImage.Image>
-                            <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAlCAYAAAAjt+tHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD0SURBVFhH7dcxCoMwFMZxr9qxJ+hZXAXBI7gJTt7BTXDOEDKJvPpMQsVKfC8RU0r+kCVDvx8iSDMpJcQ8CZAA2eP5gpgnE0JAzJPN8wx3nq8nADeXADyA6KDKS2jHyVzQm8YWyryCTpgLEw+wpIZm+SEeQo+X0AzK3HxiAzAOwjWOeQEwCuJsHPMGYC4EZRwLAmBHCOo4FgzAtgjOOHYJANOIfD3Ucew/APqxF1D3ClRfQ7F7J1wFA7bjNg4iCHA0bqMivAGucRsF4QWgjNvOEGwAZ9zmQvAA6+eYN27TiAs+x1eXAAnwe4D9xd0n/T2PDJDwBg355atVt8loAAAAAElFTkSuQmCC" />
-                          </ui:ClickImage.Image>
-                          <ui:ClickImage.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9324efc0-2b37-4938-b0e6-628c0f32ee1e" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Primavera - Timesheets - Google Chrome - \\Remote' /&gt;">
-                              <ui:Target.TimeoutMS>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:Target.TimeoutMS>
-                              <ui:Target.WaitForReady>
-                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                              </ui:Target.WaitForReady>
-                            </ui:Target>
-                          </ui:ClickImage.Target>
-                        </ui:ClickImage>
                       </Sequence>
                     </If.Else>
                   </If>
@@ -371,7 +322,7 @@
               </ActivityAction>
             </ui:ForEachRow.Body>
           </ui:ForEachRow>
-          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="847,106" sap2010:WorkflowViewState.IdRef="ClickImage_5" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="613,106" sap2010:WorkflowViewState.IdRef="ClickImage_5" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:ClickImage.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -396,8 +347,8 @@
               </ui:Target>
             </ui:ClickImage.Target>
           </ui:ClickImage>
-          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="847,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
-          <ui:ImageFound DisplayName="Image Exists 'wfica32.exe Primavera'" Found="[buttonAdd]" sap:VirtualizedContainerService.HintSize="847,106" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+          <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="613,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+          <ui:ImageFound DisplayName="Image Exists 'wfica32.exe Primavera'" Found="[buttonAdd]" sap:VirtualizedContainerService.HintSize="613,106" sap2010:WorkflowViewState.IdRef="ImageFound_1">
             <ui:ImageFound.Image>
               <ui:ImageTarget Image="{x:Null}" Accuracy="1" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHYAAAAbCAYAAACpzXuVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVaSURBVGhD7ZlBa9tKEMff18vBFxeSQwIJpCWI4ASUgw462PAEwRhjcCA++OAcBLEJabALFTgHF0x4NS0JTjGBtLx3aL/HvJlZ7XqlrOzoBefVRoc/xKvR7uz8pJnR5o8fP39BptVTBnZFlYFdUWVgV1QZ2BVVBnZF9Wyw771dWHuzCzkvMF6fp6BK91cgMFyLa9R20NaBs7H5utL4HCz0ifyaJ29guH+W5NzVa/P1ORr1a9DU13zhfGn1bLCuFiR/YraZpUWDLVVrLC9Bna+G+2fpJSAGFfYp8jD9jmBvL1109BAa7RN2uHD5YLSbpYWCtc9hZLr+f8kE9pX1LLC+Q1AO4frnEMpb+LfVNNrNUgb2dTUf7NcmbKOTuTCFXNf30el9KA8NtqF6p0XYxgeAlLdPoIepOwnsp8sKFHb2OBA56xjOPn9fKFjZK9jdaNa5Rxjr5IP3Ae5pLCF16v6S1g+KUO1/U9fFPqPifRjmY1vy/XEIZ94R5DcwXiSOgzkrNtyp3bqDsR1/gTM7nEezmwv2xj9isArkkNLxvgIdFy+C9m/L59DpB+DXHchtHINbovEo2KBKDwk52AAfbTv+n7C5cQQubnKRb6yLQVlDn94/TsdKlIm2KtDDsSSwwt89tbfeZQPsd7SvXXA/fmeb28843iryWKGFf/cHMPo7aT78jb5bO7uw6YYxaFfgLfpHirw84wso4BjJPr3AeS+g6qA/G6HSgm2Q41snmIZjYxQYclgbf/h4DDl03vLvIuP3/QrkaVM62DAT5MsBB1Lqx7glApCyeZqp2EN4j36S//lwvFcmYPuYOgUclgFEiX6jv8omlLuxB5tl8abzHp7ZPMm3ex3HIjHAl4fA5utDZSsyjQPNWEz4YUsNFhcgIPn6IDJ+0zrkwMSbKFqcwMaBk/hh0MDSHAS2gd0qb0aT3EQasDO74u6XJ/eKNRBmXTx0MrjKJgms3ZjaJCklWFMMaC0drE33Ypl40GxYk4v0YKme0qaf1NPwbaPJ9HFurA5axrQoNjEF23HF755mI/VazROnZLofFeDDOA+sLB2kvFWEcvsDXI//md4j9R/AKrtQ/BC5V+L3oCYyYfvuKVgUxz0NWNq4SKHJampOeTSWEOQo2LuwFkdrrtRrge15YdOGbwKBjVw3gCDddLGuWnscaF3U9Cm7VGDNMYjEMpyPwMbtSKmaJ1kv8/axOb2haDE9TS8TWFn3pUp9DQwpAayuTwNsYNxDBVeVoN8ZrKyXpjTBotxOi6PkhkTdKhqDHAfJdRp/mz6bxIYXC5a74J0aBJMBeNiVyo5Y2cRBDBuwiZ858c8kEvm7ULCPVzwf1di4HXEo6LahzGClsdWEG9P1UAIktfqizjzwhorciOh28hsxsolwozl0SLflca59iwMru2D5lqq3V+94DSAI7JrdmtqEWjRYkmwojV2xZivHjWDFEeIubPtPu0ldlK55UudCjcmF5HeZf1rEb1P8zbCimxi1XZHGDipw1o1+w6UCu+XOPSuWnbGEqA4iQskuWaVkA4i4vySZite1DlaCzWEH3cHv2KT50oDl+zEuJPUdS2vjb9KzwDYtWjA8MTFc18Ud2ZujSBNFpzMWjwu57b+gk7CJ275oRqRtoR5A4KessQhW3p8oCuhjwCmYwHYmsS54cgU2BUimZAMI0qh/AoV30+aJumP95Enq+tRRJ0T85r4ArBqf0IMUP3kKjLaJNTbT8ojA5qrRs4YM7JLIo9MtL/yu1XTbLXLmkH2OVAZ2STTtXWqqvjc8R5SEeMpGZWCXSPyfJa2+k0qXQ+4V4keSGdgVVQZ2JfUL/gV1Nv4NZ2DSGAAAAABJRU5ErkJggg==" />
             </ui:ImageFound.Image>
@@ -409,17 +360,21 @@
               </ui:Target>
             </ui:ImageFound.Target>
           </ui:ImageFound>
-          <If Condition="[buttonAdd]" sap:VirtualizedContainerService.HintSize="847,286" sap2010:WorkflowViewState.IdRef="If_2">
+          <If Condition="[buttonAdd]" sap:VirtualizedContainerService.HintSize="613,283" sap2010:WorkflowViewState.IdRef="If_2">
             <If.Then>
-              <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_15" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_17" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:ClickImage.CursorPosition>
-                  <ui:CursorPosition OffsetX="-20" OffsetY="20" Position="TopRight" />
+                  <ui:CursorPosition OffsetX="700" Position="Center">
+                    <ui:CursorPosition.OffsetY>
+                      <InArgument x:TypeArguments="x:Int32" />
+                    </ui:CursorPosition.OffsetY>
+                  </ui:CursorPosition>
                 </ui:ClickImage.CursorPosition>
                 <ui:ClickImage.Image>
-                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+                  <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGwAAAAhCAYAAAA8oE5/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASaSURBVGhD7ZjPa9tIFID77+XgiwvJwYEEvKGYEAdcqA86xFCBEcYUaogPPiQHgVOMW+xABcrBhRAa0yUhXoKhDelh+3+8fW+kkTXjGUtKN2kEc/ggHj2NRu+bH095cffvLzDkByMsZxhhOcMIyxlGWM4wwnKGEZYzjLCcYYTlDCMsZ6QW5tbLsPayDHvDufK6lkkL76vD8Y3iWpyUcTaOgcaxisRnxWHPLYM9UVxbwdTvQGN4vWh7YD9ZSSfsdgB7L3eDhFR66hgdjyGscgB2+52WpxBG46icPFNhF+5rHEwT3FETCijOOVfHKXkMYe0z5bWnZEnYE5FKWHcHk2R9gtm9B9ZGGQq2p4wjju3XUMQYonI40YpIGyeTRdgHC2PlPm8/QY3eodaHKf1WrIwr3O72dl7h5MQ4pFTvwPjmZ3D9pg8VGkMM1r/cD3+fy6/Cu65TX7dhTAzXqUcxW3YfvlwGz5FXbLKw8w4U8cbaKDi7vDYN0gJX8VBnG69t7MMb9xTGoz40qq8YctLSxqnItMIouSQHJxtvYxI3DuADH7+U6Dn+pvf9q9ED1/dgPOzCHhtvEz7eY8z9NXh+l91TcgYw9icwpXaNMKJkdVlf7uEBlHA88rFyXAvyUTvE/sJ8FLZ3GZmFkSB6ATZYamMDsZaKj6uhhe30gB9CuywibZwOJmwVuHLi8dMTi60S6/MPuBodRH9HMVKi2YSsHgWrj3OJglCY44erDFnaEjXCio4HM/zNmZ4EEpPywSTG+wtJFMa3wHmszdnEzqRZ8tHGtp0eXMTaiPnnpjDAtHE6mLBVRYeL26t0D3v57X0GT2B0XUp0cF7v4upfvYrTCStDww9EiXH1KI6teEU+7nypv5CVwgL7NCN/CsLO3lPFKBYfLCn2qRBHiCKuU8bpybQlcvi5g8LG31UJFBPTZqsd40NoqzrjZ1hIFmFRjCKuV8Vn4CQSYohwzJmE8W8vHfHiQyfi7u8exiYLE+P0PETYDCcDvTxB22GSMGJ+cw7uUVMoPuLbVlphcr+PJwwTuIU3FKweHqx4+ErYFZK2KD6YCFzaqVZYYpyehwgLtvUBuLQdU/GAqyy6rktsnNtTaNAxECte/ldhmA8hhkBhwSQR27XCLo72mTDdN1ewXVqw5X5jv2ejt/iAXdwCVIfnQkTaOB1ZhbEzk1eFvKTHFR7FCAnECWVhdVYfLK6HPJYwXdFB484kjBcWS4dhDJq5a5ud6DdLOi9P/QE40Vkgikgbp4IJS/hPR28SVLC0FdJLxxMbVGmxSlFKIK8qS9Y7OB55DKcenNn2RKwS1yotLNfDIueBwgi2yqR8FGhiIamF0aCT/m/Iig8UFl+F4/cWrOODGPSROKQBLotIGyfDEpUAE/TdC1ZFTSrRkS5t55stVoCoEngxaglnV7HSxA9gMRfTURO2cOwEu/c3hBHxj2v24YxjyCTM8Gcxwp4ptEsVdxbHCmfs4FmKwjyp3Qj705x3YJ223morOjPb1v7S2csxwp4Bs8s+WFVcUSQOKWJR1fb/UcYaYTnDCMsZRljOMMJyhhGWM4ywXPEL/gMRtfKzB23h/wAAAABJRU5ErkJggg==" />
                 </ui:ClickImage.Image>
                 <ui:ClickImage.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5809912e-1240-46f0-b8f1-d72f8bf504b2" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Primavera - Timesheets - Google Chrome - \\Remote' /&gt;">
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="695ecdb7-1596-4601-8e81-c9c25ad52594" Selector="&lt;wnd app='wfica32.exe' cls='Transparent Windows Client' title='Primavera - Timesheets - Google Chrome - \\Remote' /&gt;">
                     <ui:Target.TimeoutMS>
                       <InArgument x:TypeArguments="x:Int32" />
                     </ui:Target.TimeoutMS>
@@ -431,7 +386,7 @@
               </ui:ClickImage>
             </If.Then>
           </If>
-          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="847,106" sap2010:WorkflowViewState.IdRef="ClickImage_12" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="613,106" sap2010:WorkflowViewState.IdRef="ClickImage_12" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:ClickImage.CursorPosition>
               <ui:CursorPosition OffsetX="70" Position="Center">
                 <ui:CursorPosition.OffsetY>
@@ -453,7 +408,7 @@
               </ui:Target>
             </ui:ClickImage.Target>
           </ui:ClickImage>
-          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="847,106" sap2010:WorkflowViewState.IdRef="ClickImage_13" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="613,106" sap2010:WorkflowViewState.IdRef="ClickImage_13" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:ClickImage.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -478,7 +433,7 @@
               </ui:Target>
             </ui:ClickImage.Target>
           </ui:ClickImage>
-          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="847,106" sap2010:WorkflowViewState.IdRef="ClickImage_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_DOUBLE" DisplayName="Click Image 'wfica32.exe Primavera'" sap:VirtualizedContainerService.HintSize="613,106" sap2010:WorkflowViewState.IdRef="ClickImage_6" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:ClickImage.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -503,14 +458,10 @@
               </ui:Target>
             </ui:ClickImage.Target>
           </ui:ClickImage>
-          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke LoadTimes workflow" sap:VirtualizedContainerService.HintSize="847,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="LoadTimes.xaml">
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke LoadTimes workflow" sap:VirtualizedContainerService.HintSize="613,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="LoadTimes.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="sd:DataTable" x:Key="DataTableActivities">
-                <mva:VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dataTableUserActivities" />
-              </InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="EmailSend">
-                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="EmailSend" />
-              </InArgument>
+              <InArgument x:TypeArguments="sd:DataTable" x:Key="DataTableActivities">[dataTableUserActivities]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="EmailSend">[EmailSend]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
         </Sequence>
