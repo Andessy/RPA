@@ -2598,15 +2598,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LuisaFernandaAceroMa\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "PrimaveraProcess",
       "projectName": "PrimaveraProcess",
-      "projectPath": "C:\\Users\\LuisaFernandaAceroMa\\Documents\\RPA Git\\RPA\\.local",
-      "packagesPath": "C:\\Users\\LuisaFernandaAceroMa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LuisaFernandaAceroMa\\Documents\\RPA Git\\RPA\\.local"
+      "projectPath": "C:\\Users\\Admin\\Documents\\RPA Primavera\\RPA\\.local",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\Documents\\RPA Primavera\\RPA\\.local"
     },
     "frameworks": {
       "net461": {
@@ -2632,7 +2632,7 @@
             "version": "[20.4.2, 20.4.2]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\LuisaFernandaAceroMa\\AppData\\Local\\UiPath\\app-21.4.1\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Admin\\AppData\\Local\\UiPath\\app-21.4.2\\runtime.json"
       }
     }
   }
