@@ -89,6 +89,7 @@
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -1730,7 +1731,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <TryCatch.Try>
-                      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;The code &quot;&amp; row(6).ToString &amp; &quot; is missing in Primavera for your user&quot;]" DisplayName="Send SMTP Mail Message" Email="[emailreal]" EnableSSL="True" From="[emailreal]" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" Name="[nameIT]" Password="[passwordreal]" Port="25" SecureConnection="Auto" Server="smtp.office365.com" Subject="Missing code in Primavera" To="[EmailSend]">
+                      <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;The code &quot;&amp; row(8).ToString &amp;&quot; &quot;&amp; row(9).ToString &amp;&quot; &quot;&amp; &quot; is missing in Primavera for your user&quot;]" DisplayName="Send SMTP Mail Message" Email="[emailreal]" EnableSSL="True" From="[emailreal]" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="False" Name="[nameIT]" Password="[passwordreal]" Port="25" SecureConnection="Auto" Server="smtp.office365.com" Subject="Missing code in Primavera" To="[EmailSend]">
                         <ui:SendMail.Files>
                           <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
                         </ui:SendMail.Files>
